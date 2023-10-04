@@ -8,59 +8,46 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var game = TicTacToeGame()
+    
     var body: some View {
         VStack {
+            Spacer()
             boardView
-            HStack {
-                Text("Player 1")
-                Spacer()
-                Text("Player 2")
-            }
-            .font(.largeTitle)
+            Spacer()
+            scoreBoard
         }
         .padding(10)
     }
     
-    var boardView: some View {
-        GeometryReader { geometry in
-            let size = min(geometry.size.width, geometry.size.height) / 3 - 2*15
-            VStack(spacing: 15) {
-                ForEach(0..<3) { row in
-                    HStack(spacing: 15) {
-                        ForEach(0..<3) { stack in
-                            TicOrToeView()
-                        }
-                    }
+    private var boardView: some View {
+        BoardGrid { row, col in
+            TicOrToeView(ticOrToe: $game.board[row][col])
+                .onTapGesture {
+                    game.selectField(row, col)
                 }
-            }
-            .background(.black)
         }
-        .aspectRatio(1/1, contentMode: .fit)
+    }
+    
+    private var scoreBoard: some View {
+        HStack {
+            Button("Restart") {
+                game.cleanBoard()
+            }
+        }
+        .font(.largeTitle)
     }
 }
 
 struct TicOrToeView: View {
-    @State var ticOrToe: TicOrToe = .empty
+    @Binding var ticOrToe: PlayerMark
     
     var body: some View {
-        ZStack {
-            Rectangle()
-                .fill(.white)
-                .opacity(1)
-            Image(systemName: ticOrToe.rawValue)
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .padding(10)
-        }
-        .onTapGesture {
-            ticOrToe = ticOrToe == .cross ? .nought : .cross
-        }
-    }
-    
-    enum TicOrToe: String {
-        case cross = "xmark"
-        case nought = "circle"
-        case empty = ""
+        Image(systemName: ticOrToe.rawValue)
+            .resizable()
+            .aspectRatio(contentMode: .fit)
+            .padding(10)
+            .background(.white)
     }
 }
 
