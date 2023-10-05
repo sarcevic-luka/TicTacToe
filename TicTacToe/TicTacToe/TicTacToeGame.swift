@@ -9,7 +9,7 @@ import Foundation
 import Combine
 
 class TicTacToeGame: ObservableObject {
-    @Published var board: [[PlayerMark]] = Array(repeating: Array(repeating: PlayerMark.empty, count: 3), count: 3)
+    @Published var board: [[PlayerMark]] = Array(repeating: Array(repeating: .empty, count: 3), count: 3)
     
     var currentPlayer: PlayerMark = .cross
     
@@ -24,7 +24,7 @@ class TicTacToeGame: ObservableObject {
     }
     
     func cleanBoard() {
-        board = Array(repeating: Array(repeating: PlayerMark.empty, count: 3), count: 3)
+        board = Array(repeating: Array(repeating: .empty, count: 3), count: 3)
     }
 
     private func gameIsOver() -> Bool {

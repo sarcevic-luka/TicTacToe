@@ -14,6 +14,9 @@
 		F1C1EF5F2ACDF805001BBBBE /* TicTacToeGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C1EF5E2ACDF805001BBBBE /* TicTacToeGame.swift */; };
 		F1C1EF612ACE15A1001BBBBE /* PlayerMark.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C1EF602ACE15A1001BBBBE /* PlayerMark.swift */; };
 		F1C1EF632ACE162E001BBBBE /* BoardGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C1EF622ACE162E001BBBBE /* BoardGrid.swift */; };
+		F1C1EF652ACE2811001BBBBE /* CrossView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C1EF642ACE2811001BBBBE /* CrossView.swift */; };
+		F1C1EF682ACE36C0001BBBBE /* CrossShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C1EF672ACE36C0001BBBBE /* CrossShape.swift */; };
+		F1C1EF6A2ACE36E7001BBBBE /* EmptyShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C1EF692ACE36E7001BBBBE /* EmptyShape.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +28,9 @@
 		F1C1EF5E2ACDF805001BBBBE /* TicTacToeGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeGame.swift; sourceTree = "<group>"; };
 		F1C1EF602ACE15A1001BBBBE /* PlayerMark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerMark.swift; sourceTree = "<group>"; };
 		F1C1EF622ACE162E001BBBBE /* BoardGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardGrid.swift; sourceTree = "<group>"; };
+		F1C1EF642ACE2811001BBBBE /* CrossView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrossView.swift; sourceTree = "<group>"; };
+		F1C1EF672ACE36C0001BBBBE /* CrossShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrossShape.swift; sourceTree = "<group>"; };
+		F1C1EF692ACE36E7001BBBBE /* EmptyShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyShape.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +63,9 @@
 		F162CF092ACCC21800EAA4A5 /* TicTacToe */ = {
 			isa = PBXGroup;
 			children = (
+				F1C1EF662ACE36A4001BBBBE /* Shape Drawing Views */,
 				F162CF0C2ACCC21800EAA4A5 /* ContentView.swift */,
+				F1C1EF642ACE2811001BBBBE /* CrossView.swift */,
 				F162CF0A2ACCC21800EAA4A5 /* TicTacToeApp.swift */,
 				F1C1EF602ACE15A1001BBBBE /* PlayerMark.swift */,
 				F1C1EF622ACE162E001BBBBE /* BoardGrid.swift */,
@@ -74,6 +82,15 @@
 				F162CF112ACCC21C00EAA4A5 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F1C1EF662ACE36A4001BBBBE /* Shape Drawing Views */ = {
+			isa = PBXGroup;
+			children = (
+				F1C1EF672ACE36C0001BBBBE /* CrossShape.swift */,
+				F1C1EF692ACE36E7001BBBBE /* EmptyShape.swift */,
+			);
+			path = "Shape Drawing Views";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,7 +166,10 @@
 				F1C1EF5F2ACDF805001BBBBE /* TicTacToeGame.swift in Sources */,
 				F162CF0D2ACCC21800EAA4A5 /* ContentView.swift in Sources */,
 				F1C1EF632ACE162E001BBBBE /* BoardGrid.swift in Sources */,
+				F1C1EF6A2ACE36E7001BBBBE /* EmptyShape.swift in Sources */,
+				F1C1EF652ACE2811001BBBBE /* CrossView.swift in Sources */,
 				F162CF0B2ACCC21800EAA4A5 /* TicTacToeApp.swift in Sources */,
+				F1C1EF682ACE36C0001BBBBE /* CrossShape.swift in Sources */,
 				F1C1EF612ACE15A1001BBBBE /* PlayerMark.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

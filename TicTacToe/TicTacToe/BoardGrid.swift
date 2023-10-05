@@ -24,6 +24,7 @@ struct BoardGrid<Content: View>: View {
                 }
             }
         }
+        .aspectRatio(1/1, contentMode: .fit)
         .background(.black)
     }
 }

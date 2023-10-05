@@ -41,13 +41,11 @@ struct ContentView: View {
 
 struct TicOrToeView: View {
     @Binding var ticOrToe: PlayerMark
-    
+
     var body: some View {
-        Image(systemName: ticOrToe.rawValue)
-            .resizable()
-            .aspectRatio(contentMode: .fit)
-            .padding(10)
-            .background(.white)
+        ShapeDrawingView(playerMark: ticOrToe)
+            .background(Color.white)
+            .aspectRatio(1, contentMode: .fit)
     }
 }
 
