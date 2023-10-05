@@ -11,6 +11,7 @@ struct CrossShape: Shape {
     func path(in rect: CGRect) -> Path {
         let startCoordinate = rect.width * 0.1
         let endCoordinate = rect.height * 0.9
+        
         let firstLineStartPositon = CGPoint(x: startCoordinate, y: startCoordinate)
         let firstLineEndPosition = CGPoint(x: endCoordinate, y: endCoordinate)
         let secondLineStartPosition = CGPoint(x: endCoordinate, y: startCoordinate)
